@@ -1,6 +1,6 @@
 # LEDE Compiler System
 
-Based on Ubuntu 20.04
+Based on Ubuntu 20.04 LTS
 
 ## Build the image from Dockerfile
 
@@ -18,7 +18,7 @@ Initialize the container
 docker run -it --name=lede  -v /your/host/path:/home/fubuki/lede lede /bin/bash
 ```
 
-Note: `/your/host/path` must be in a case-sensitive file system.
+Note: `/your/host/path` must be in a case-sensitive file system. That is to say, you cannot set it to a NTFS drive or some HFS/APFS without case-sensitive feature.
 
 
 

@@ -2,7 +2,7 @@ FROM ubuntu:20.04
 LABEL maintainer="zaber" version="20.04"
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG TZ=Asia/Shanghai
+ENV TZ=Asia/Shanghai
 
 RUN apt-get update \
     && apt-get upgrade -y
@@ -16,5 +16,5 @@ RUN apt-get install -y sudo && useradd -m -G sudo ${USERNAME}
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}/lede
 
-ENV TERM xterm-256color
+ENV TERM xterm-color
 
